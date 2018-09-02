@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang='en'>
+<head>
     <title>Home Page</title>
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/welcome-page.css" type="text/css"/>
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
-  </head>
-
-  <body>
-    <h1>Hello World!</h1>
-  </body>
+    <%- include ./partials/_header.ejs %>
+</head>
+<body>
+    <div class='container'>
+        <div class='welcome-content'>
+            <h1>Hello.</h1>
+            <h2>Welcome to Decision Maker!</h2>
+            <h3>
+                Create a poll, share it with your friends, rank your choices
+                and let Decision Maker help you make your decision*.
+                It's quick, easy and efficient!
+            </h3>
+            <p>
+                *Decisions are ranked based on the Borda count method.
+            </p>
+            <a href="/createpoll/step/1">Create a poll</a>
+        </div>
+    </div>
+</body>    
 </html>

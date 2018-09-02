@@ -1,7 +1,23 @@
-body {
-  background-color: #EEE;
+* {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
 
-  h1 {
-    color: #244751;
-  }
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.alphacoders.com/147/147931.jpg');
+    color: #EEE;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
