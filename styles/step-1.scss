@@ -22,6 +22,16 @@
 .form-input {
     margin-left: 50px;
     width: 85%;
-    height: 50px;
+    height: 40px;
     border-radius: 5px;
+    color: grey;
+}
+
+#poll-description {
+    height: 100px;
+    border: grey;
+}
+
+input:invalid {
+    border: 2px solid red;
 }
