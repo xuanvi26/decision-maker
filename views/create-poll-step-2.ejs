@@ -5,29 +5,52 @@
 <head>
     <%- include ./partials/_header.ejs %>
     <link rel="stylesheet" href="/styles/step-1.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/step-2.css" type="text/css"/>
 </head>
 
 <body class='center'>
-    <button class='button-container'>
-        <div class='button-body'>
-            <div>+ Create a new option</div>
+    <h1 class='heading'>Add your options</h1>
+    <div>
+        <div class='small-space'>
+            <button class='button-container'>
+                <div class='button-body'>
+                    + Create a new option
+                </div>
+            </button>
         </div>
-    </button>
-
-    <form method='POST' action='/createpoll/step/2'>
-        <input type='text' name='optionName' placeholder='Ex: Tuesday @12pm'/>
-        <input type='text' name='optionDescription' placeholder='Description (optional, ex: Predicted to be sunny this day.)'/>
-        <button>Add option</button>
-    </form>
-
-    <section class='option-container'>
-        <!-- this is where I will append the options but it needs a post method to delete it as well -->
-        <!-- hard code some stuff in here to visulize -->
-    </section>
-
-    <!-- add the specific id of the poll to the link fetched form the db -->
-    <form method='POST' action='/createpoll/complete'>
-        <input type='submit' value='Done'/>
-    </form>
+        <div class='form-container small-space'></div>
+    </div>
 </body>
-</html>
+
+<!-- <body class='center, space-column'>
+    <div>
+        <button class='button-container'>
+            <div class='button-body'>
+                + Create a new option
+            </div>
+        </button>
+    </div>
+
+    <div>
+        <form method='POST' action='/createpoll/step/2'>
+            <input type='text' name='optionName' placeholder='Ex: Tuesday @12pm'/>
+            <input type='text' name='optionDescription' placeholder='Description (optional, ex: Predicted to be sunny this day.)'/>
+            <button>Add option</button>
+        </form>
+    </div>
+
+    <div>
+        <section class='option-container'>
+            <!-- this is where I will append the options but it needs a post method to delete it as well -->
+            <!-- hard code some stuff in here to visulize -->
+        <!-- </section>
+    </div> --> 
+
+    <!-- add the specific id of the poll to the link fetched form the db
+    <div>
+        <form method='POST' action='/createpoll/complete'>
+            <input type='submit' value='Done'/>
+        </form>
+    </div>
+</body>
+</html> -->

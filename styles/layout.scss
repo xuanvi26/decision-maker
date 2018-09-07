@@ -19,11 +19,16 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .heading {
     font-weight: 100;
     margin: 0;
     font-size: 4em;
+}
+
+.small-space {
+    margin: 5px;
 }
