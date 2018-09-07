@@ -9,4 +9,12 @@ $(document).ready(function () {
             $('.button-body').css({'text-decoration': 'none'})
         }
     );
+    $('.submit').hover(
+        function() {
+            $(this).css({'text-decoration': 'underline'})
+        },
+        function() {
+            $(this).css({'text-decoration': 'none'})
+        }
+    );
 })

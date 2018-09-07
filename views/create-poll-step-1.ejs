@@ -5,14 +5,22 @@
     <link rel="stylesheet" href="/styles/step-1.css" type="text/css" />
 <body>
     <div class='center'>
-        <div class='form-container'>
-            <form method="POST" action='/createpoll/step/1'>
-                <input type='email' name='email' placeholder='Your e-mail'/>
-                <input type='text' name='userName' placeholder='Your name'/>
-                <input type='text' name='pollName' placeholder='Poll name (ex: when are you free?)'/>
-                <input type='submit' value='Submit'/>
-            </form>
-        </div>
+        <form class='form-container' method="POST" action='/createpoll/step/1'>
+            <h1>Create a poll</h1>
+            <div class='form-section'>
+                <div class='form-input-title'>Your e-mail*</div>
+                <input class='form-input' type='email' name='email'/>
+            </div>
+            <div class='form-section'>
+                <div class='form-input-title'>Your name*</div>
+                <input class='form-input' type='text' name='userName'/>
+            </div>
+            <div class='form-section'>
+                    <div class='form-input-title'>Poll name*</div>
+                    <input class='form-input' type='text' name='pollName' placeholder='Ex: When are you free?'/>
+            </div>
+            <input class='submit' type='submit' value='Submit'/>
+        </form>
     </div>
 </body>
 </html>
