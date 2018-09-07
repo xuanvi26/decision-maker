@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+    <%- include ./partials/_header.ejs %>
+    <link rel="stylesheet" href="/styles/step-1.css" type="text/css" />
+<body>
+    <div class='center'>
+        <div class='form-container'>
+            <form method="POST" action='/createpoll/step/1'>
+                <input type='email' name='email' placeholder='Your e-mail'/>
+                <input type='text' name='userName' placeholder='Your name'/>
+                <input type='text' name='pollName' placeholder='Poll name (ex: when are you free?)'/>
+                <input type='submit' value='Submit'/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

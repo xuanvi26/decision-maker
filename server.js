@@ -43,6 +43,10 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/createpoll/step/1", (req, res) => {
+  res.render("create-poll-step-1");
+});
+
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
