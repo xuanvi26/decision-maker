@@ -2,22 +2,28 @@
 <html lang='en'>
 <head>
     <%- include ./partials/_header.ejs %>
+    <link rel="stylesheet" href="/styles/welcome-page.css" type="text/css"/>
+    <script type="text/javascript" src="/scripts/fade-in.js"></script>
 </head>
 <body>
     <div class='center'>
         <div class='welcome-content'>
-            <h1>Hello.</h1>
-            <h2>Welcome to Decision Maker!</h2>
-            <h3>
-                Create a poll, share it with your friends, rank your choices
-                and let Decision Maker help you make your decision*.
-                It's quick, easy and efficient!
-            </h3>
-            <p>
-                *Decisions are ranked based on the Borda count method.
-            </p>
-            <div class="button-container">
-                <a class="button-body" href="/createpoll/step/1">Create a poll</a>
+            <div id='title-section' class='hidden'>
+                <h1 class='heading'>Hello.</h1>
+            </div>
+            <div id='description-section' class='hidden'>
+                <h2>Welcome to Decision Maker!</h2>
+                <h3>
+                    Create a poll, share it with your friends, rank your choices
+                    and let Decision Maker help you make your decision*.
+                    It's quick, easy and efficient!
+                </h3>
+                <p>
+                    *Decisions are ranked based on the Borda count method.
+                </p>
+                <div class="button-container">
+                    <a class="button-body" href="/createpoll/step/1">Create a poll</a>
+                </div>
             </div>
         </div>
     </div>
