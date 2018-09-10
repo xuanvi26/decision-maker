@@ -11,14 +11,24 @@
 <body class='center'>
     <h1 class='heading'>Add your options</h1>
     <div>
-        <div class='small-space'>
-            <button class='button-container'>
-                <div class='button-body'>
-                    + Create a new option
-                </div>
-            </button>
-        </div>
-        <div class='form-container small-space'></div>
+        <button class='button-container bottom-small-margin'>
+            <div class='button-body'>
+                + Create a new option
+            </div>
+        </button>
+
+        <form class='form-container small' method="POST" action='/createpoll/step/2'>
+            <div class='form-section'>
+                <div class='form-input-title'>Answer*</div>
+                <input class='form-input' type='text' name='option' required/>
+            </div>
+            <div class='form-section'>
+                    <div class='form-input-title'>Description</div>
+                    <textarea class= 'description form-input' type='text' rows='5' name='pollDescription'></textarea>
+            </div>
+            <input class='submit' type='submit' value='Submit'/>
+        </form>
+
     </div>
 </body>
 
