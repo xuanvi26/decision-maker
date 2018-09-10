@@ -23,6 +23,10 @@ body {
     justify-content: space-evenly;
 }
 
+.hidden {
+    display: none;
+}
+
 .heading {
     font-weight: 100;
     margin: 0;
@@ -37,4 +41,9 @@ body {
 
 .bottom-small-margin {
     margin-bottom: 7px;
+}
+
+.display-row-option {
+    display: flex;
+    flex-direction: row;
 }

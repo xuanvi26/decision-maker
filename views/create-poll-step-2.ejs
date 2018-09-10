@@ -6,36 +6,43 @@
     <%- include ./partials/_header.ejs %>
     <link rel="stylesheet" href="/styles/step-1.css" type="text/css"/>
     <script type="text/javascript" src="/scripts/option-toggle.js"></script>
+    <script type="text/javascript" src="/scripts/side-toggle.js"></script>
+    <script type="text/javascript" src="/scripts/step-2.js"></script>
 </head>
 
 <body class='center'>
     <h1 class='heading'>Add your options</h1>
-    <div>
-        <button id='add-option' class='button-container bottom-small-margin'>
-            <div class='button-body'>
-                + Create a new option
-            </div>
-        </button>
-        <button class='button-container blue bottom-small-margin'>
+    <button id='add-option' class='button-container bottom-small-margin'>
+        <div class='button-body'>
+            + Create a new option
+        </div>
+    </button>
+    <div id='options-container'>
+        <div class='display-row-option'>
+            <button class='button-container blue bottom-small-margin'>
                 <div class='button-body'>
                     Pizza Napoletena
                     <div class='subtitle'>
                         (The original pizzeria of Montreal, opened in 1946.)
                     </div>
                 </div>
-        </button>
-        <form class='form-container small' method="POST" action='/createpoll/step/2'>
-            <div class='form-section'>
-                <div class='form-input-title'>Answer*</div>
-                <input class='form-input' type='text' name='option' required/>
-            </div>
-            <div class='form-section'>
-                    <div class='form-input-title'>Description</div>
-                    <textarea class= 'description form-input' type='text' rows='5' name='pollDescription'></textarea>
-            </div>
-            <input class='submit' type='submit' value='Done'/>
-        </form>
+            </button>
+            <button class='delete hidden'>
+                Delete
+            </button>
+        </div>
     </div>
+    <form class='form-container' method="POST" action='/createpoll/step/2'>
+        <div class='form-section'>
+            <div class='form-input-title'>Answer*</div>
+            <input class='form-input' type='text' name='answer' required/>
+        </div>
+        <div class='form-section'>
+                <div class='form-input-title'>Description</div>
+                <textarea class= 'description form-input' type='text' rows='5' name='description'></textarea>
+        </div>
+        <input class='submit' type='submit' value='Done'/>
+    </form>
     <input class='submit' type='submit' value='Submit poll'/>
     <div class='subtitle'>Please make sure all your information is correct. You will not be able to modify your poll once it has been submitted.</div>  
 </div>
