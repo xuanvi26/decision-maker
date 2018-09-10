@@ -11,12 +11,19 @@
 <body class='center'>
     <h1 class='heading'>Add your options</h1>
     <div>
-        <button class='button-container bottom-small-margin'>
+        <button id='add-option' class='button-container bottom-small-margin'>
             <div class='button-body'>
                 + Create a new option
             </div>
         </button>
-
+        <button class='button-container blue bottom-small-margin'>
+                <div class='button-body'>
+                    Pizza Napoletena
+                    <div class='subtitle'>
+                        (The original pizzeria of Montreal, opened in 1946.)
+                    </div>
+                </div>
+        </button>
         <form class='form-container small' method="POST" action='/createpoll/step/2'>
             <div class='form-section'>
                 <div class='form-input-title'>Answer*</div>
@@ -26,41 +33,10 @@
                     <div class='form-input-title'>Description</div>
                     <textarea class= 'description form-input' type='text' rows='5' name='pollDescription'></textarea>
             </div>
-            <input class='submit' type='submit' value='Submit'/>
+            <input class='submit' type='submit' value='Done'/>
         </form>
-
     </div>
+    <input class='submit' type='submit' value='Submit poll'/>
+    <div class='subtitle'>Please make sure all your information is correct. You will not be able to modify your poll once it has been submitted.</div>  
+</div>
 </body>
-
-<!-- <body class='center, space-column'>
-    <div>
-        <button class='button-container'>
-            <div class='button-body'>
-                + Create a new option
-            </div>
-        </button>
-    </div>
-
-    <div>
-        <form method='POST' action='/createpoll/step/2'>
-            <input type='text' name='optionName' placeholder='Ex: Tuesday @12pm'/>
-            <input type='text' name='optionDescription' placeholder='Description (optional, ex: Predicted to be sunny this day.)'/>
-            <button>Add option</button>
-        </form>
-    </div>
-
-    <div>
-        <section class='option-container'>
-            <!-- this is where I will append the options but it needs a post method to delete it as well -->
-            <!-- hard code some stuff in here to visulize -->
-        <!-- </section>
-    </div> --> 
-
-    <!-- add the specific id of the poll to the link fetched form the db
-    <div>
-        <form method='POST' action='/createpoll/complete'>
-            <input type='submit' value='Done'/>
-        </form>
-    </div>
-</body>
-</html> -->

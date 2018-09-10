@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".button-container").click(function() {
+    $("#add-option").click(function() {
       $(".form-container").toggle("slow");
     });
 });
