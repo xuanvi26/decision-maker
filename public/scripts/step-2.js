@@ -14,11 +14,12 @@ $(document).ready(function() {
   
     const createOption = rawOption => {
       let optionDiv = $("<div>").addClass("display-row-option");
-      let optionButton = $("<button>").addClass("button-container blue bottom-small-margin");
+      let optionButton = $("<button>").addClass("button blue-container bottom-small-margin");
       let optionBody = optionBody(rawOption);
       optionDiv.apend(optionButton);
       optionButton.append(optionBody);
-      return option;
+      optionDiv.append(`<input type='submit' value='Delete'>`).addClass('button delete');
+      return optionDiv;
     };
   
     const renderOptions = (options) => {
@@ -31,22 +32,21 @@ $(document).ready(function() {
     const appendOptions = () => {
       $.get('/createpoll/step/2', function(data) {
         renderOptions(hardCodedOption);
-        addHoverAndDelete();
       });
     }
 
     
-    const addHoverAndDelete = () => {
-      $("#options-container .button-container").hover(
-        function() {
-          $(this).css({opacity: '1'});
-          $(this).children().css({'text-decoration': 'underline'})
-        },
-        function() {
-          $(this).css({opacity:'0.7'});
-          $(this).children().css({'text-decoration': 'none'})
-        }
-        );
+    const addFocus= () => {
+      // $("#options-container .blue-container").hover(
+      //   function() {
+      //     $(this).css({opacity: '1'});
+      //     $(this).children().css({'text-decoration': 'underline'})
+      //   },
+      //   function() {
+      //     $(this).css({opacity:'0.7'});
+      //     $(this).children().css({'text-decoration': 'none'})
+      //   }
+      //   );
       }
       
     // appendOptions();
