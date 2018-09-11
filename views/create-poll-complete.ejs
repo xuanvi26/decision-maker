@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+    <%- include ./partials/_header.ejs %>
+    <link rel="stylesheet" href="/styles/step-1.css" type="text/css"/>
+</head>
+
+<body>
+    <div class='center' style='justify-content: center'>
+        <h1 class='heading bottom-big-margin'>Congratulations!</h1>
+        <h2 class='heading-2 bottom-big-margin'>Your poll has been created.</h2>
+        <div class='text-content'>
+            <h3 class='heading-3'>Click on this link to answer the poll - share it with your friends!</h3>
+            <div class='display-row-option'>
+                <button class='button blue-container'>
+                    <div class='button-body'>
+                        https://answerthepoll.com
+                    </div>
+                </button>
+                <input class='button delete' type='submit' value='Delete'/>
+            </div>
+            <h3 class='heading-3'>Click on this link to manage and view the poll results.</h3>
+            <button class='button blue-container'>
+                <div class='button-body'>
+                    https://managethepoll.com
+                </div>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
