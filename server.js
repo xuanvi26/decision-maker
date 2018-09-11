@@ -57,11 +57,15 @@ app.get('/createpoll/step/2', (req, res) => {
 
 app.post('/createpoll/complete', (req, res) => {
   res.redirect('/createpoll/complete');
-})
+});
 
 app.get('/createpoll/complete', (req, res) => {
   res.render('create-poll-complete');
-})
+});
+
+app.get('/answer/poll', (req, res) => {
+  res.render('answer-poll');
+});
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
