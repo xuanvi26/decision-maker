@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.grey-container, .delete').hover(
+    $('.grey-container').hover(
         function() {
             $(this).css({opacity: '1'});
         },
@@ -7,7 +7,7 @@ $(document).ready(function () {
             $(this).css({opacity:'0.7'});
         }
     );
-    $('.submit, .grey-container, .delete').hover(
+    $('.submit, .grey-container, .delete, .copy').hover(
         function() {
             $(this).css({'text-decoration': 'underline'})
         },

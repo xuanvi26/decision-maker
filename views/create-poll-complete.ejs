@@ -4,7 +4,7 @@
 
 <head>
     <%- include ./partials/_header.ejs %>
-    <link rel="stylesheet" href="/styles/step-1.css" type="text/css"/>
+    <script type="text/javascript" src="/scripts/copy.js"></script>
 </head>
 
 <body>
@@ -14,18 +14,14 @@
         <div class='text-content'>
             <h3 class='heading-3'>Click on this link to answer the poll - share it with your friends!</h3>
             <div class='display-row-option'>
-                <button class='button blue-container'>
-                    <div class='button-body'>
-                        https://answerthepoll.com
-                    </div>
+                <button class='button grey-container short'>
+                    <a class="button-body" href="https://answerthepoll.com">https://answerthepoll.com</a>
                 </button>
-                <input class='button delete' type='submit' value='Delete'/>
+                <button onclick="copyToClipboard('#link-to-copy')" class='button copy'>Copy</button>
             </div>
             <h3 class='heading-3'>Click on this link to manage and view the poll results.</h3>
-            <button class='button blue-container'>
-                <div class='button-body'>
-                    https://managethepoll.com
-                </div>
+            <button class='button grey-container'>
+                <a class="button-body" href="https://managethepoll.com">https://managethepoll.com</a>
             </button>
         </div>
     </div>
