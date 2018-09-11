@@ -4,47 +4,41 @@
 
 <head>
     <%- include ./partials/_header.ejs %>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="/scripts/drag-and-drop.js"></script>
+    <link rel="stylesheet" href="/styles/sortable-list.css" type="text/css"/>
 </head>
 
 <body>
     <div class='center' style='justify-content: center'>
         <h1 class='heading bottom-big-margin'>Answer the poll</h1>
         <h2 class='heading-2 bottom-big-margin'>What is the poll's name?</h2>
-        <div id='answers-container'>
-            <button class='button blue-container bottom-small-margin'>
-                <div class="button-body">
-                    Option 1
-                    <div class='subtitle'>
-                        (The original pizzeria of Montreal, opened in 1946.)
-                    </div>
+        <ul id="sortable">
+            <li class='button blue-container bottom-small-margin list'>
+                <div class="button-body bold">
+                    Pizza Napoletena
                 </div>
-            </button>
-            <button class='button blue-container bottom-small-margin'>
-                <div class="button-body">
-                    Option 2
-                    <div class='subtitle'>
-                        (The original pizzeria of Montreal, opened in 1946.)
-                    </div>
+                <div class='subtitle'>
+                    (The original pizzeria of Montreal, opened in 1946)
                 </div>
-            </button>
-            <button class='button blue-container bottom-small-margin'>
-                <div class="button-body">
-                    Option 3
-                    <div class='subtitle'>
-                        (The original pizzeria of Montreal, opened in 1946.)
-                    </div>
+            </li>
+            <li class='button blue-container bottom-small-margin list'>
+                <div class="button-body bold">
+                    Kantapia
                 </div>
-            </button>
-            <button class='button blue-container bottom-small-margin'>
-                <div class="button-body">
-                    Option 4
-                    <div class='subtitle'>
-                        (The original pizzeria of Montreal, opened in 1946.)
-                    </div>
+                <div class='subtitle'>
+                    (Restaurant on Sherbroke)
                 </div>
-            </button>
-        </div>
+            </li>
+            <li class='button blue-container bottom-small-margin list'>
+                <div class="button-body bold">
+                    NegaSake
+                </div>
+                <div class='subtitle'>
+                    (Where we eat lunch pretty often)
+                </div>
+            </li>
+        </ul>
         <form method='POST' action='/answer/complete'>
             <input class='submit' type='submit' value='Submit'/>
         </form>

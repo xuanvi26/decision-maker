@@ -6,7 +6,7 @@ const hardCodedOption = [{
 $(document).ready(function() {
 
     const optionBody = rawOption => {
-      let optionBody = $(`<div>${rawOption.answer}</div>`).addClass('button-body');
+      let optionBody = $(`<div>${rawOption.answer}</div>`).addClass('button-body bold');
       let optionDescription = $(`<div>${rawOption.description}</div>`).addClass('subtitle');
       optionBody.append(optionDescription);
       return optionBody;
