@@ -75,6 +75,10 @@ app.get('/answer/complete', (req, res) => {
   res.render('answer-complete');
 });
 
+app.get('/viewresults', (req, res) => {
+  res.render('view-poll-results');
+});
+
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
