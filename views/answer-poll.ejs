@@ -11,7 +11,7 @@
     <div class='center' style='justify-content: center'>
         <h1 class='heading bottom-big-margin'>Answer the poll</h1>
         <h2 class='heading-2 bottom-big-margin'>What is the poll's name?</h2>
-        <div>
+        <div id='answers-container'>
             <button class='button blue-container bottom-small-margin'>
                 <div class="button-body">
                     Option 1
@@ -45,6 +45,9 @@
                 </div>
             </button>
         </div>
+        <form method='POST' action='/answer/complete'>
+            <input class='submit' type='submit' value='Submit'/>
+        </form>
     </div>
 </body>
 
