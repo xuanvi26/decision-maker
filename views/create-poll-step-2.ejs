@@ -6,8 +6,6 @@
     <%- include ./partials/_header.ejs %>
     <link rel="stylesheet" href="/styles/step-1.css" type="text/css"/>
     <script type="text/javascript" src="/scripts/option-toggle.js"></script>
-    <script type="text/javascript" src="/scripts/side-toggle.js"></script>
-    <script type="text/javascript" src="/scripts/step-2.js"></script>
 </head>
 
 <body class='center'>
@@ -41,7 +39,9 @@
         </div>
         <input class='submit' type='submit' value='Done'/>
     </form>
-    <input class='submit' type='submit' value='Submit poll'/>
+    <form method='POST' action='/createpoll/complete'>
+        <input class='submit' type='submit' value='Submit poll'/>
+    </form>
     <div class='subtitle'>Please make sure all your information is correct. You will not be able to modify your poll once it has been submitted.</div>  
 </div>
 </body>
