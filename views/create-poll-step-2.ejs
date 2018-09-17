@@ -4,8 +4,9 @@
 
 <head>
     <%- include ./partials/_header.ejs %>
-    <link rel="stylesheet" href="/styles/steps.css" type="text/css"/>
     <script type="text/javascript" src="/scripts/option-toggle.js"></script>
+    <script type="text/javascript" src="/scripts/step-2.js"></script>
+    <link rel="stylesheet" href="/styles/steps.css" type="text/css"/>
 </head>
 
 <body class='center'>
@@ -16,17 +17,6 @@
         </div>
     </button>
     <div id='options-container'>
-        <div class='display-row-option'>
-            <button class='button blue-container bottom-small-margin'>
-                <div class='button-body bold'>
-                    Pizza Napoletena
-                    <div class='subtitle'>
-                        (The original pizzeria of Montreal, opened in 1946.)
-                    </div>
-                </div>
-            </button>
-            <input class='button delete' type='submit' value='Delete'/>
-        </div>
     </div>
     <form class='form-container' style='display:none; height:425px' method="POST" action='/createpoll/step/2'>
         <div class='form-section'>

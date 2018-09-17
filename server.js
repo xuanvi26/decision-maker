@@ -47,7 +47,7 @@ app.get("/createpoll/step/1", (req, res) => {
   res.render("create-poll-step-1");
 });
 
-app.post('/createpoll/step/1', async (req, res) => {
+app.post('/createpoll/step/1', (req, res) => {
   knex('polls').insert({owner_name: req.body.ownerName, email: req.body.email, name: req.body.pollName, description: req.body.description}).then(function(){
     res.redirect('/createpoll/step/2');
   });
@@ -55,6 +55,11 @@ app.post('/createpoll/step/1', async (req, res) => {
 
 app.get('/createpoll/step/2', (req, res) => {
   res.render('create-poll-step-2');
+});
+
+app.get('/polls/:id', async (req, res) => {
+  const queryRes = await knex('answers').select('*');
+  res.json(queryRes);
 });
 
 app.post('/createpoll/complete', (req, res) => {
