@@ -26,44 +26,43 @@ $(document).ready(function() {
       return optionDiv;
     };
   
-    const renderOptions = (options) => {
-      options.forEach(rawOption => {
+    const addHover = () => {
+      $('.delete').hover(
+        function() {
+          $(this).css({'text-decoration': 'underline'})
+        },
+        function() {
+          $(this).css({'text-decoration': 'none'})
+        }
+      )
+    };
+  
+    const renderOption = (rawOption) => {
         let option = createOption(rawOption);
         $("#options-container").append(option);
-      });
+        addHover();
     };
 
-    const appendOptions = () => {
-      $.get('/polls/2', function(data) {
-        renderOptions(data);
-      });
-    };
 
-    // const addFocus= () => {
-    //   // $("#options-container .blue-container").hover(
-    //   //   function() {
-    //   //     $(this).css({opacity: '1'});
-    //   //     $(this).children().css({'text-decoration': 'underline'})
-    //   //   },
-    //   //   function() {
-    //   //     $(this).css({opacity:'0.7'});
-    //   //     $(this).children().css({'text-decoration': 'none'})
-    //   //   }
-    //   //   );
-    //   }
+    // const appendOptions = () => {
+    //   $.get('/polls/2', function(data) {
+    //     renderOption(data);
+    //     addHover();
+    //   });
+    // };
       
-    appendOptions();
+    // appendOptions();
 
-    // $('body form').submit(function (event) {
-    //   event.preventDefault();
-    //   const optionName = $('body form input[name="answer"]').val();
-    //   const description = $('body form textarea[name="description"]').val();
-    //   $.post('/createpoll/step/2', {name: optionName, description}, function(data) {
-    //     appendOptions();
-    //     $("body input[name='answer']").val('');
-    //     $("body textarea[name='description']").val('');
-    //   })
-    // });
+    $('body form').submit(function (event) {
+      event.preventDefault();
+      const optionName = $('body form input[name="answer"]').val();
+      const description = $('body form textarea[name="description"]').val();
+      $.post('/createpoll/step/2', {name: optionName, description}, function(answer) {
+        renderOption(answer);
+        $("body input[name='answer']").val('');
+        $("body textarea[name='description']").val('');
+      })
+    });
   
     // const loadTweets = () => {
     //   $.get('/createpoll/step/2', function(data) {

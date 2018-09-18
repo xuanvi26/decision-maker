@@ -62,6 +62,11 @@ app.get('/polls/:id', async (req, res) => {
   res.json(queryRes);
 });
 
+app.post('/createpoll/step/2', async (req, res) => {
+  const answer = await knex('answers').insert({name: req.body.name, description: req.body.description}).returning('*');
+  res.json(answer[0]);
+});
+
 app.post('/createpoll/complete', (req, res) => {
   res.redirect('/createpoll/complete');
 });
