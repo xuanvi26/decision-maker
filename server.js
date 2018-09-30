@@ -35,6 +35,8 @@ app.use("/styles", sass({
 }));
 app.use(express.static("public"));
 
+var pollId;
+
 // Mount all resource routes
 app.use("/api/users", usersRoutes(knex));
 
@@ -48,12 +50,13 @@ app.get("/createpoll/step/1", (req, res) => {
 });
 
 app.post('/createpoll/step/1', (req, res) => {
-  knex('polls').insert({owner_name: req.body.ownerName, email: req.body.email, name: req.body.pollName, description: req.body.description}).then(function(){
-    res.redirect('/createpoll/step/2');
+  knex('polls').insert({owner_name: req.body.ownerName, email: req.body.email, name: req.body.pollName, description: req.body.description}).returning('id').then(function(id){
+    pollId = id;
+    res.redirect(`/createpoll/step/2/poll/${id}`);
   });
 });
 
-app.get('/createpoll/step/2', (req, res) => {
+app.get('/createpoll/step/2/poll/:id', (req, res) => {
   res.render('create-poll-step-2');
 });
 
@@ -62,8 +65,8 @@ app.get('/polls/:id', async (req, res) => {
   res.json(queryRes);
 });
 
-app.post('/createpoll/step/2', async (req, res) => {
-  const answer = await knex('answers').insert({name: req.body.name, description: req.body.description}).returning('*');
+app.post('/createpoll/step/2/poll/:id', async (req, res) => {
+  const answer = await knex('answers').insert({name: req.body.name, description: req.body.description, poll_id: req.params.id}).returning('*');
   res.json(answer[0]);
 });
 
@@ -72,7 +75,7 @@ app.post('/createpoll/complete', (req, res) => {
 });
 
 app.get('/createpoll/complete', (req, res) => {
-  res.render('create-poll-complete');
+  res.render('create-poll-complete', {pollId});
 });
 
 app.get('/answer/poll', (req, res) => {

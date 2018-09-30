@@ -53,11 +53,11 @@ $(document).ready(function() {
       
     // appendOptions();
 
-    $('body form').submit(function (event) {
+    $('.option-form').submit(function (event) {
       event.preventDefault();
       const optionName = $('body form input[name="answer"]').val();
       const description = $('body form textarea[name="description"]').val();
-      $.post('/createpoll/step/2', {name: optionName, description}, function(answer) {
+      $.post(window.location.pathname, {name: optionName, description}, function(answer) {
         renderOption(answer);
         $("body input[name='answer']").val('');
         $("body textarea[name='description']").val('');
