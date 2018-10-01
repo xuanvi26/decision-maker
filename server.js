@@ -78,11 +78,14 @@ app.get('/createpoll/complete', (req, res) => {
   res.render('create-poll-complete', {pollId});
 });
 
-app.get('/answer/poll', (req, res) => {
-  res.render('answer-poll');
+app.get('/answer/poll/:id', async (req, res) => {
+  const answers = await knex.select('name', 'description').from('answers').where({poll_id: req.params.id});
+  const pollName = await knex.select('name').from('polls').where({id: req.params.id});
+  console.log(pollName);
+  res.render('answer-poll', {answers, pollName});
 });
 
-app.post('/answer/complete', (req, res) => {
+app.post('/answer/complete', async (req, res) => {
   res.redirect('/answer/complete');
 });
 

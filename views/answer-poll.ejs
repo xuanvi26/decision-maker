@@ -12,32 +12,19 @@
 <body>
     <div class='center' style='justify-content: center'>
         <h1 class='heading bottom-big-margin'>Answer the poll</h1>
-        <h2 class='heading-2 bottom-big-margin'>What is the poll's name?</h2>
+        <h2 class='heading-2 bottom-big-margin'><%= pollName[0].name %></h2>
+        <span class='subtitle'>Please rank the following answers in order from best (top) to worst (bottom)</span>
         <ul id="sortable">
-            <li class='button blue-container bottom-small-margin list'>
-                <div class="button-body bold">
-                    Pizza Napoletena
-                </div>
-                <div class='subtitle'>
-                    (The original pizzeria of Montreal, opened in 1946)
-                </div>
-            </li>
-            <li class='button blue-container bottom-small-margin list'>
-                <div class="button-body bold">
-                    Kantapia
-                </div>
-                <div class='subtitle'>
-                    (Restaurant on Sherbroke)
-                </div>
-            </li>
-            <li class='button blue-container bottom-small-margin list'>
-                <div class="button-body bold">
-                    NegaSake
-                </div>
-                <div class='subtitle'>
-                    (Where we eat lunch pretty often)
-                </div>
-            </li>
+            <% for(let elem of answers) { %>
+                <li class='button blue-container bottom-small-margin list'>
+                    <div class="button-body bold">
+                        <%= elem.name %>
+                    </div>
+                    <div class='subtitle'>
+                        <%= elem.description %>
+                    </div>
+                </li>
+            <% } %>
         </ul>
         <form method='POST' action='/answer/complete'>
             <input class='submit' type='submit' value='Submit'/>
