@@ -94,9 +94,9 @@ app.get('/answer/complete', (req, res) => {
 });
 
 app.get('/results/poll/:id', async (req, res) => {
-  const results = await knex.select('name', 'score').from('answers').where({poll_id: req.params.id})
-  console.log(results);
-  res.render('view-poll-results', {results});
+  const results = await knex.select('name', 'score').from('answers').where({poll_id: req.params.id});
+  const poll = await knex.select('name').from('polls').where({id: req.params.id});
+  res.render('view-poll-results', {results, poll});
 });
 
 app.listen(PORT, () => {

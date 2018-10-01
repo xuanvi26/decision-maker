@@ -10,11 +10,11 @@
 <body>
     <div class='center' style='justify-content: center'>
         <h1 class='heading bottom-big-margin'>View poll results</h1>
-        <h2 class='heading-2 bottom-big-margin'>What is the poll's name?</h2>
+        <h2 class='heading-2 bottom-big-margin'><%= poll[0].name %></h2>
         <dl>
-            <dd class="percentage percentage-25"><span class="text">Pizza Napoletena </span></dd>
-            <dd class="percentage percentage-60"><span class="text">Kantapia</span></dd>
-            <dd class="percentage percentage-15"><span class="text">NegaSake</span></dd>
+            <% for (let elem of results) { %>
+                <dd class="percentage percentage-<%= elem.score %>"><span class="text"><%= elem.name + ' (' + elem.score + ')'%></span></dd>
+            <% } %>
         </dl>
     </div>
 </body>
