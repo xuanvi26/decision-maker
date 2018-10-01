@@ -14,7 +14,6 @@ const knex        = require("knex")(knexConfig[ENV]);
 const morgan      = require('morgan');
 const knexLogger  = require('knex-logger');
 
-// Seperated Routes for each Resource
 const usersRoutes = require("./routes/users");
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
@@ -80,23 +79,26 @@ app.get('/createpoll/complete', (req, res) => {
 
 app.get('/answer/poll/:id', async (req, res) => {
   const answers = await knex.select('name', 'description').from('answers').where({poll_id: req.params.id});
-  const pollName = await knex.select('name').from('polls').where({id: req.params.id});
-  console.log(pollName);
-  res.render('answer-poll', {answers, pollName});
+  const poll = await knex.select('name', 'description').from('polls').where({id: req.params.id});
+  res.render('answer-poll', {answers, poll});
 });
 
 app.post('/answer/complete', async (req, res) => {
-  res.redirect('/answer/complete');
+  knex('answers').insert({}).then(function(id){
+    res.redirect('/answer/complete');
+  });
 });
 
 app.get('/answer/complete', (req, res) => {
   res.render('answer-complete');
 });
 
-app.get('/viewresults', (req, res) => {
-  res.render('view-poll-results');
+app.get('/results/poll/:id', async (req, res) => {
+  const results = await knex.select('name', 'score').from('answers').where({poll_id: req.params.id})
+  console.log(results);
+  res.render('view-poll-results', {results});
 });
 
 app.listen(PORT, () => {
-  console.log("Example app listening on port " + PORT);
+  console.log("Decision Maker listening on port " + PORT);
 });

@@ -12,7 +12,8 @@
 <body>
     <div class='center' style='justify-content: center'>
         <h1 class='heading bottom-big-margin'>Answer the poll</h1>
-        <h2 class='heading-2 bottom-big-margin'><%= pollName[0].name %></h2>
+        <h2 class='heading-2' style='margin-bottom: -20px'><%= poll[0].name %></h2>
+        <h3 class='heading-3 bottom-big-margin'><%= poll[0].description %></h3>
         <span class='subtitle'>Please rank the following answers in order from best (top) to worst (bottom)</span>
         <ul id="sortable">
             <% for(let elem of answers) { %>
