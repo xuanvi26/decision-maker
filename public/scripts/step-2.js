@@ -43,16 +43,6 @@ $(document).ready(function() {
         addHover();
     };
 
-
-    // const appendOptions = () => {
-    //   $.get('/polls/2', function(data) {
-    //     renderOption(data);
-    //     addHover();
-    //   });
-    // };
-      
-    // appendOptions();
-
     $('.option-form').submit(function (event) {
       event.preventDefault();
       const optionName = $('body form input[name="answer"]').val();
@@ -63,15 +53,6 @@ $(document).ready(function() {
         $("body textarea[name='description']").val('');
       })
     });
-  
-    // const loadTweets = () => {
-    //   $.get('/createpoll/step/2', function(data) {
-    //     renderTweets(data);
-    //     addHover();
-    //   });
-    // };
-  
-    // loadTweets();
   
   });
   

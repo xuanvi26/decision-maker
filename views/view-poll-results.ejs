@@ -13,7 +13,7 @@
         <h2 class='heading-2 bottom-big-margin'><%= poll[0].name %></h2>
         <dl>
             <% for (let elem of results) { %>
-                <dd class="percentage percentage-<%= elem.score %>"><span class="text"><%= elem.name + ' (' + elem.score + ')'%></span></dd>
+                <dd class="percentage percentage-<%= elem.percentage %>"><span class="text"><%= elem.name + ' (' + elem.score + ')'%></span></dd>
             <% } %>
         </dl>
     </div>
