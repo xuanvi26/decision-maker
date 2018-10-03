@@ -8,7 +8,6 @@ $(document).ready(function() {
             score: answersArr.length - index
         })
     });
-    console.log(answerScores)
 
     $( "#sortable" ).sortable({
         stop: function(){
@@ -20,13 +19,11 @@ $(document).ready(function() {
                     score: answersArr.length - index
                 })
             answerScores = tempArr;
-            })
-        console.log(answerScores)    
+            }) 
         }
     });
 
     $('form').submit(function () {
-        console.log(answerScores);
         $.post('/answer/complete', {answers: answerScores});
     });
 
