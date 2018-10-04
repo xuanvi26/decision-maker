@@ -14,6 +14,7 @@
 * knex-logger
 * Morgan
 * PostgreSQL
+* jQuery
 
 ## Getting Started
 
