@@ -43,7 +43,7 @@ $(document).ready(function() {
         addHover();
     };
 
-    $('.option-form').submit(function (event) {
+    $('.form-container').submit(function (event) {
       event.preventDefault();
       const optionName = $('body form input[name="answer"]').val();
       const description = $('body form textarea[name="description"]').val();
@@ -51,8 +51,19 @@ $(document).ready(function() {
         renderOption(answer);
         $("body input[name='answer']").val('');
         $("body textarea[name='description']").val('');
+        $(".form-container").toggle('slow');
       })
     });
+
+    $('#submit-poll').click(function (event) {
+      event.preventDefault();
+      const path = window.location.pathname,
+            pathParts = path.split('/'),
+            lastPart = pathParts[pathParts.length-1];
+      window.location.href = `/createpoll/complete/poll/${lastPart}`;
+    })
+
+    $()
   
   });
   

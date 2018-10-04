@@ -4,33 +4,32 @@
 
 <head>
     <%- include ./partials/_header.ejs %>
-    <script type="text/javascript" src="/scripts/option-toggle.js"></script>
+    <script type="text/javascript" src="/scripts/toggle.js"></script>
     <script type="text/javascript" src="/scripts/step-2.js"></script>
-    <link rel="stylesheet" href="/styles/steps.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/form.css" type="text/css"/>
 </head>
 
 <body class='center'>
-    <h1 class='heading'>Add your options</h1>
+    <h1>Add your options</h1>
     <button id='add-option' class='button grey-container bottom-small-margin'>
         <div class='button-body'>
             + Create a new option
         </div>
     </button>
-    <div id='options-container'>
-    </div>
-    <form class='form-container option-form' style='display:none; height:425px' method="POST" action='/createpoll/step/2'>
+    <div id='options-container'></div>
+    <form class='form-container' style='display:none; height: 425px' method="POST" action='/createpoll/step/2'>
         <div class='form-section'>
             <div class='form-input-title'>Option*</div>
             <input class='form-input' type='text' name='answer' required/>
         </div>
         <div class='form-section'>
                 <div class='form-input-title'>Description</div>
-                <textarea class= 'description form-input' type='text' rows='5' name='description'></textarea>
+                <textarea class= 'form-description form-input' type='text' rows='5' name='description'></textarea>
         </div>
         <input class='submit' type='submit' value='Done'/>
     </form>
-    <form method='POST' action='/createpoll/complete'>
-        <input class='submit' type='submit' value='Submit poll'/>
+    <form>
+        <input id='submit-poll' class='submit' type='submit' value='Submit poll'/>
     </form>
     <div class='subtitle'>Please make sure all your information is correct. You will not be able to modify your poll once it has been submitted.</div>  
 </div>

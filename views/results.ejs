@@ -9,8 +9,8 @@
 
 <body>
     <div class='center' style='justify-content: center'>
-        <h1 class='heading bottom-big-margin'>View poll results</h1>
-        <h2 class='heading-2 bottom-big-margin'><%= poll[0].name %></h2>
+        <h1 class='bottom-big-margin'>View poll results</h1>
+        <h2 class='bottom-big-margin'><%= poll[0].name %></h2>
         <dl>
             <% for (let elem of results) { %>
                 <dd class="percentage percentage-<%= elem.percentage %>"><span class="text"><%= elem.name + ' (' + elem.score + ')'%></span></dd>

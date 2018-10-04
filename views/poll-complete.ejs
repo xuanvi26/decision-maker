@@ -9,17 +9,17 @@
 
 <body>
     <div class='center' style='justify-content: center'>
-        <h1 class='heading bottom-big-margin'>Congratulations!</h1>
-        <h2 class='heading-2 bottom-big-margin'>Your poll has been created.</h2>
+        <h1 class='bottom-big-margin'>Congratulations!</h1>
+        <h2 class='bottom-big-margin'>Your poll has been created.</h2>
         <div class='text-content'>
-            <h3 class='heading-3'>Click on this link to answer the poll - share it with your friends!</h3>
+            <h3>Click on this link to answer the poll - share it with your friends!</h3>
             <div class='display-row-option'>
                 <button class='button grey-container short'>
                     <a id='link-to-copy' class="button-body" href="localhost:8080/answer/poll/<%= pollId %>">localhost:8080/answer/poll/<%= pollId %></a>
                 </button>
                 <button onclick="copyToClipboard()" class='button copy'>Copy</button>
             </div>
-            <h3 class='heading-3'>Click on this link to manage and view the poll results.</h3>
+            <h3>Click on this link to manage and view the poll results.</h3>
             <button class='button grey-container'>
                 <a class="button-body" href="localhost:8080/results/poll/<%= pollId %>">localhost:8080/results/poll/<%= pollId %></a>
             </button>
