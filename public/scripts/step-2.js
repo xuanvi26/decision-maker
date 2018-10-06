@@ -10,6 +10,7 @@ $(document).ready(function() {
       return optionBody;
     };
 
+    //@TODO implement back end of deletion
     const createDeleteButton = () => {
       let button = $('<input type="submit" value="Delete">').addClass('button delete');
       return button;
