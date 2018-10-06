@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     //@TODO implement back end of deletion
     const createDeleteButton = () => {
-      let button = $('<input type="submit" value="Delete">').addClass('button delete');
+      let button = $('<input type="submit" value="Delete">').addClass('button delete small-button');
       return button;
     }
   

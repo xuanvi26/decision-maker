@@ -1,5 +1,5 @@
 .button {
-    height: 55px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,10 +8,15 @@
     border-width: 0px;
 }
 
+.button.small-button {
+    font-size: 0.9em;
+    width: 75px;
+}
+
 .button-body {
     color: $white;
     font-weight: 300;
-    font-size: 1.1em;
+    font-size: 0.9em;
     text-decoration: none;
 }
 
@@ -21,17 +26,17 @@
 
 .grey-container {
     background-color: $grey;
-    width: 700px;
+    width: 575px;
     opacity: 0.8;
 }
 
 .blue-container {
     background-color: $blue;
-    width: 630px; 
+    width: 505px; 
 }
 
 .short {
-    width: 630px;
+    width: 505px;
 }
 
 .display-row-option {
@@ -41,21 +46,19 @@
 
 .delete {
     background-color: $red;
-    width: 75px;
 }
 
 .copy {
     background-color: $pink;
-    width: 75px;
 }
 
 .submit {
-    height: 42px;
+    height: 35px;
     background-color: $grey;
-    width: 100px;
-    border-radius: $secondary-radius;    
+    width: 86px;
+    font-size: 0.9em;
+    border-radius: $tertiary-radius;    
     border-width: 0px;
-    margin-top: 35px;
     color: $white;
 }
 

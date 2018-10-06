@@ -1,7 +1,7 @@
 .form-container {
     background-image: $linear-gradient;
-    height: 625px;
-    width: 700px;
+    height: 430px;
+    width: 575px;
     border-radius: $primary-radius;
     display: flex;
     flex-direction: column;
@@ -15,23 +15,29 @@
 
 .form-input-title {
     margin-left: 50px;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: 200;
 }
 
 .form-input {
-    margin-left: 50px;
+    margin-left: 45px;
     width: 85%;
-    height: 40px;
+    height: 30px;
+    font-size: 0.8em;
     border-radius: $tertiary-radius;
     color: $dark-grey;
 }
 
 .form-description {
-    height: 100px;
-    border: $grey;
+    height: 85px;
+    border-width: 1px;
+    border-color: $grey;
+}
+
+.option-form-container {
+    height: 300px;
 }
 
 input:invalid {
-    border: 2px solid $red;
+    border: 1px solid $red;
 }

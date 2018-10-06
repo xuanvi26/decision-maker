@@ -28,31 +28,31 @@ body {
 }
 
 .text-content{
-    width: 700px;
+    width: 575px;
 }
 
 h1 {
     font-weight: 100;
     margin: 0;
-    font-size: 4em;
+    font-size: 3em;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0;
     font-weight: 200;
 }
 
 h3 {
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 35px;
 }
 
 .subtitle {
     font-weight: 100;
     font-style: italic;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 .bottom-small-margin {
@@ -61,4 +61,8 @@ h3 {
 
 .bottom-big-margin {
     margin-bottom: 45px;
+}
+
+.negative-margin {
+    margin-bottom: -20px;
 }
