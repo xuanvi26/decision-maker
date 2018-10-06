@@ -28,7 +28,7 @@ dl {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
-      border-radius: 7px;
+      border-radius: $secondary-radius;
     }
     &:hover {
       &:after {

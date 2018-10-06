@@ -2,7 +2,7 @@
     background-image: $linear-gradient;
     height: 625px;
     width: 700px;
-    border-radius: 15px;
+    border-radius: $primary-radius;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -23,7 +23,7 @@
     margin-left: 50px;
     width: 85%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: $teriary-radius;
     color: $dark-grey;
 }
 
