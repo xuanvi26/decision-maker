@@ -4,7 +4,8 @@
 * Clients can create polls, share their link to allow other users to rank the options and view the results.
 
 ## Final Product
-
+![Create Poll](https://i.imgur.com/lKs8K9v.gif)
+![Results](https://i.imgur.com/J59GLW4.gif)
 ## Dependencies
 
 * body-parser
