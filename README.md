@@ -1,6 +1,6 @@
-# Decision Maker Project
+# Decision Maker
 
-* Survey generator built with EJS, Express, Node.js, jQuery and PostgreSQL. 
+* Poll generator built with EJS, Express, Node.js, jQuery and PostgreSQL. 
 * Clients can create polls, share their link to allow other users to rank the options and view the results.
 
 ## Final Product
